@@ -1,0 +1,146 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Practice Projects</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100vh;
+        font-family: sans-serif, Arial, Helvetica;
+      }
+
+      /* ===============> PROJECT 1 <================ */
+      .project1 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+
+      .project1 .rotate {
+        width: 300px;
+        height: 300px;
+        background-color: lightseagreen;
+        border: 15px dashed #000;
+        border-radius: 50%;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(200deg);
+          background-color: rgb(225, 65, 142);
+        }
+      }
+
+      /* ===============> PROJECT 2 <================ */
+      .project2 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(217, 254, 226);
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .project2 .card {
+        width: 450px;
+        height: 300px;
+        background-color: rgb(4, 3, 21);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 20px;
+      }
+
+      .project2 .card .heading1 {
+        color: #fff;
+        font-weight: 600;
+        opacity: 0;
+        transition: 0.6s;
+        transform: translateY(140%);
+      }
+
+      .project2 .card:hover .heading1 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ===============> PROJECT 3 <================ */
+      .project3 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(255, 251, 243);
+      }
+
+      .project3 h1 {
+        font-size: 6vw;
+        cursor: pointer;
+        position: relative;
+        transition: 0.1s;
+      }
+
+      .project3 h1:hover::after {
+        content: "";
+        width: 100%;
+        height: 9px;
+        background-color: #000;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        animation-name: line;
+        animation-duration: 1s;
+      }
+
+      @keyframes line {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===============> PROJECT 1 <================ -->
+    <div class="project1">
+      <div class="rotate"></div>
+    </div>
+    <!-- ===============> PROJECT 2 <================ -->
+    <div class="project2">
+      <h1>Hover This Box</h1>
+      <div class="card">
+        <h1 class="heading1">
+          Hello Everyone <br />
+          I'm Muhammad Asad
+        </h1>
+      </div>
+    </div>
+    <!-- ===============> PROJECT 2 <================ -->
+    <div class="project3">
+      <h1>Hello Everyone</h1>
+    </div>
+  </body>
+</html>
